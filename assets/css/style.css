@@ -1,0 +1,8 @@
+.giphy-gif {
+    cursor: pointer;
+    -moz-window-dragging: none;
+    -webkit-user-drag: none;
+}
+.btn, input {
+    margin: 5px;
+}
