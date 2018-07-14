@@ -6,7 +6,7 @@ let searchTermArray = ["Apple",
     "Coconut",
     "Durian",]
 
-let addButtons = function (text) {
+let addButton = function (text) {
     if (text) {
         console.log(text);
         let newButton = $("<div>").attr({
@@ -45,32 +45,15 @@ let clickableGifs = function () {
 }
 
 
-
-
-
-
-
-
 $(document).ready(function () {
-    searchTermArray.forEach(function(e) {addButtons(e)});
+    searchTermArray.forEach(function(e) {addButton(e)});
     $("#clear-button").click(function () {
         $("#giphy-gifs-div").empty();
         $(".gif-button").attr("data-offset", 0);
     });
     $("#add-buttons-button").click(function () {
         event.preventDefault();
-        if ($("#button-text").val()) {
-            console.log(event);
-            console.log($("#button-text").val());
-            let newButton = $("<div>").attr({
-                "data-searchTerm": $("#button-text").val(),
-                "data-offset": "0",
-                class: "btn btn-info gif-button",
-            });
-            newButton.text($("#button-text").val());
-            $("#gif-buttons-div").append(newButton);
-            $("#button-text").val("");
-        }
+        addButton($("#button-text").val());
     });
 
 
