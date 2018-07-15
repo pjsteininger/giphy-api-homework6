@@ -6,3 +6,8 @@
 .btn, input {
     margin: 5px;
 }
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
